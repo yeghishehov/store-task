@@ -1,0 +1,94 @@
+@import "../../utils/variables.pcss";
+
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: $layerPopupZindex;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  padding-top: 100px;
+  transition: visibility 0.15s, opacity 0.15s linear;
+
+  &_open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.modalCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-background);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  min-height: 60%;
+  border-radius: 20px;
+  gap: 2em;
+
+  @media (--media-over905) {
+    gap: 1em;
+  }
+  @media (--media-over1240) {
+    gap: 0.5em;
+  }
+}
+
+.image {
+  height: 30vh;
+  max-width: 95%;
+  @media (--media-over905) {
+    height: 25vh;
+  }
+}
+
+.title {
+  font-size: 3em;
+  font-weight: bold;
+  width: 95%;
+  @media (--media-over905) {
+    font-size: 1.4em;
+  }
+}
+
+.info {
+  font-size: 3em;
+  width: 95%;
+  @media (--media-over905) {
+    font-size: 1.4em;
+  }
+}
+.category {
+  opacity: 0.6;
+}
+.description {
+  text-align: justify;
+}
+.price {
+  font-size: 4em;
+  font-weight: bold;
+  @media (--media-over905) {
+    font-size: 2em;
+  }
+}
+.rating {
+  display: flex;
+  align-items: baseline;
+  font-size: 4em;
+  @media (--media-over905) {
+    font-size: 2em;
+  }
+}
+.iconWrapper {
+  width: 1em;
+  height: 1.1em;
+  margin-right: 0.7em;
+}

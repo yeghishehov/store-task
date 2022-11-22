@@ -1,0 +1,47 @@
+$switcherWidth: 40px;
+$switcherHeihgt: 20px;
+$sliderSize: 12px;
+$sliderMargin: 4px;
+
+.toggleTheme {
+  position: relative;
+  display: inline-block;
+  height: $switcherHeihgt;
+  width: $switcherWidth;
+
+  input:checked {
+    + .slider:before {
+      transform: translateX(calc($switcherWidth - $sliderMargin * 2 - $sliderSize));
+    }
+    + .slider {
+      background-color: cornflowerblue;
+    }
+  }
+}
+
+.checkboxTheme {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #ccc;
+  border-radius: $switcherHeihgt;
+  transition: background-color 0.2s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $sliderMargin;
+    left: $sliderMargin;
+    width: $sliderSize;
+    height: $sliderSize;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.4s;
+  }
+}

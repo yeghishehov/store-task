@@ -1,0 +1,51 @@
+@import "../../utils/variables.pcss";
+
+.iconContainer {
+  width: 24px;
+  height: 24px;
+  color: var(--font-color);
+}
+
+.closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--menu-background);
+  backdrop-filter: blur(20px);
+  z-index: $layerMenuZindex;
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+.link {
+  color: var(--font-color);
+  font-family: sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  margin-bottom: 20px;
+
+  &_desktop {
+    margin-bottom: 0;
+  }
+}
+
+.listDesktop {
+  flex-grow: 1;
+  display: flex;
+  gap: 30px;
+}

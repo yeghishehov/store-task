@@ -1,0 +1,35 @@
+.filter {
+  display: flex;
+  font-size: 14px;
+  color: var(--text-color);
+}
+.iconWrapper {
+  height: 20px;
+  color: var(--text-color);
+}
+.filterPanels {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  background-color: var(--header-background);  
+  box-shadow: rgb(0 0 0 / 18%) 0px 5px 4px;
+  transition: visibility 0.2s, height 0.2s, opacity 0.15s linear;
+
+  &_open {
+    visibility: visible;
+    height: 30px;
+    opacity: 1;
+  }
+
+  &_desktop {
+    display: flex;
+    gap: 40px;
+  }
+}

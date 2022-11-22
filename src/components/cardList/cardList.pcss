@@ -1,0 +1,17 @@
+@import "../../utils/variables.pcss";
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  @media (--media-over905) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (--media-over1240) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  /* @media (--media-over1440) {
+    grid-template-columns: repeat(6, 1fr);
+  } */
+}
