@@ -1,0 +1,3 @@
+*.pcss.d.ts
+**/*.js
+/**/thirdparty/**/**

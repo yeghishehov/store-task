@@ -1,0 +1,14 @@
+# Should be ignored by default
+.DS_Store
+storybook-static/
+.idea/
+.vscode/
+node_modules/
+build/
+coverage/
+lib/
+*.swp
+npm-debug.log
+.editorconfig
+.env
+t.json

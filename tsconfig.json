@@ -1,0 +1,56 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "esnext",
+        "target": "es5",
+        "lib": [
+            "esnext",
+            "dom",
+            "dom.iterable"
+        ],
+        "removeComments": false, // need for webpackChunkName
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react",
+        "allowJs": false,
+        "baseUrl": "./",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "downlevelIteration": true,
+        "paths": {
+            "src/*": [
+                "./src/*"
+            ],
+            "@assets/*": [
+                "./assets/*"
+            ]
+        },
+        "checkJs": false,
+        "declaration": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "keyofStringsOnly": false,
+        "newLine": "LF",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "./build",
+        "preserveConstEnums": true,
+        "pretty": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "skipLibCheck": true,
+        "suppressImplicitAnyIndexErrors": true
+    },
+    "include": [
+        "./node_modules/@types",
+        "@types",
+        "./src/**/*"
+    ],
+    "exclude": [
+        "./build",
+        "node_modules"
+    ]
+}
